@@ -3,6 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import HomePage from "./containers/HomePage";
 import ProductListPage from "./containers/ProductListPage";
+import ProductCardsPage from "./containers/ProductCardsPage";
 import { useDispatch, useSelector } from "react-redux";
 import { isUserLoggedIn, updateCart } from "./actions";
 import ProductDetailsPage from "./containers/ProductDetailsPage";
@@ -31,6 +32,7 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" exact component={HomePage} />
+          <Route path="/search/:searchTerm" component={ProductCardsPage} />
           <Route path="/cart" component={CartPage} />
           <Route path="/checkout" component={CheckoutPage} />
           <Route path="/account/orders" component={OrderPage} />
@@ -40,6 +42,7 @@ function App() {
             component={ProductDetailsPage}
           />
           <Route path="/:slug" component={ProductListPage} />
+
         </Switch>
       </Router>
     </div>

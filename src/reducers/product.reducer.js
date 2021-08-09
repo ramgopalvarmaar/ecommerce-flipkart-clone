@@ -63,6 +63,27 @@ export default (state = initState, action) => {
         error: action.payload.error,
       };
       break;
+
+      case productConstants.GET_PRODUCT_DETAILS_BY_SEARCH_TERM_REQUEST:
+        state = {
+          ...state,
+          loading: true,
+        };
+      break;
+      case productConstants.GET_PRODUCT_DETAILS_BY_SEARCH_TERM_SUCCESS:
+        state = {
+          ...state,
+          loading: false,
+          products: action.payload.products,
+        };
+        break;
+      case productConstants.GET_PRODUCT_DETAILS_BY_SEARCH_TERM_FAILURE:
+        state = {
+          ...state,
+          loading: false,
+          error: action.payload.error,
+        };
+        break;
   }
 
   return state;

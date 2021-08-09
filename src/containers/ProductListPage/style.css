@@ -1,13 +1,14 @@
 .productContainer{
-    width: 200px;
+    width: 90%;
     margin: 0 10px;
 }
 .productContainer .productImgContainer{
     width: 150px;
     height: 150px;
     overflow: hidden;
-    text-align: center;
+    text-align: left;
     margin: 10px auto;
+    flex-direction: row;
 }
 .productContainer .productImgContainer img{
     max-width: 100%;

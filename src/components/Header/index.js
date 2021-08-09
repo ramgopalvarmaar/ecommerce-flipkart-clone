@@ -207,70 +207,28 @@ const Header = (props) => {
           </div>
         </div>
       </Modal>
-      <div className="subHeader">
-        {/* Logo  */}
-        <div className="logo">
-          <a href="">
-            <img src={flipkartLogo} className="logoimage" alt="" />
-          </a>
-          <a style={{ marginTop: "-10px" }}>
-            <span className="exploreText">Explore</span>
-            <span className="plusText">Plus</span>
-            <img src={goldenStar} className="goldenStar" alt="" />
-          </a>
-        </div>
-        {/* logo ends here */}
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Ratestar</a>
 
-        {/* search component */}
-        <div
-          style={{
-            padding: "0 10px",
-          }}
-        >
-          <div className="searchInputContainer">
-            <input
-              className="searchInput"
-              placeholder={"search for products, brands and more"}
-            />
-            <div className="searchIconContainer">
-              <IoIosSearch
-                style={{
-                  color: "#2874f0",
-                }}
-              />
-            </div>
-          </div>
-        </div>
-        {/* search component ends here */}
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
 
-        {/* right side menu */}
-        <div className="rightMenu">
-          {auth.authenticate ? renderLoggedInMenu() : renderNonLoggedInMenu()}
-          <DropdownMenu
-            menu={
-              <a className="more">
-                <span>More</span>
-                <IoIosArrowDown />
-              </a>
-            }
-            menus={[
-              { label: "Notification Preference", href: "", icon: null },
-              { label: "Sell on flipkart", href: "", icon: null },
-              { label: "24x7 Customer Care", href: "", icon: null },
-              { label: "Advertise", href: "", icon: null },
-              { label: "Download App", href: "", icon: null },
-            ]}
-          />
-          <div>
-            <a href={`/cart`} className="cart">
-              <Cart count={Object.keys(cart.cartItems).length} />
-              <span style={{ margin: "0 10px" }}>Cart</span>
-            </a>
-          </div>
         </div>
-        {/* right side menu ends here */}
+      </nav>
       </div>
-    </div>
   );
 };
 
