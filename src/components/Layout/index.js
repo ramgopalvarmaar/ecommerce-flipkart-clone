@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../Header';
 import MenuHeader from '../MenuHeader';
+import ratestarLogo from "../../images/logo/ratestar-bgremoved.png";
 
 /**
 * @author
@@ -11,14 +12,13 @@ const Layout = (props) => {
   return (
     <>
       <Header />
-      <MenuHeader />
-      <div class="container">
+      <div class="container" style={{ marginBottom: "15px" }}>
         {props.children}
       </div>
       <div class="wrapper flex-grow-1"></div>
-      <footer class="page-footer mt-auto font-small blue">
-        <div class="footer-copyright text-center py-3">© 2021 Copyright:
-          <a href="https://ratestar.com/"> Ratestar.tk</a>
+      <footer class="page-footer mt-auto font-small" style={{backgroundColor:"#505252", marginTop:"10px"}}>
+        <div class="footer-copyright text-center" style={{color:"white"}}>© 2021 Copyright:
+          <a href="https://ratestar.tk/" style={{color:"white"}}> Ratestar.tk</a>
         </div>
       </footer>
     </>

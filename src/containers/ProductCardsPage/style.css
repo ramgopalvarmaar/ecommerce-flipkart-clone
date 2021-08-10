@@ -3,6 +3,7 @@
   align-items: center;
   margin-top: 10px;
   padding: 10px;
+  box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2), 0 8px 25px 0 rgba(0, 0, 0, 0.19) !important;
 }
 .card-title {
   font-weight: bold;
@@ -40,12 +41,13 @@
 }
 
 .price-chart{
-  margin-top: 10px;
+  margin-top: 15px;
   height: 250px;
   width: 480px;
   float: right;
   margin-bottom: 20px;
   margin-right: 40px;
+  box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2), 0 8px 25px 0 rgba(0, 0, 0, 0.19) !important;
 }
 
 @media only screen and (max-width: 768px) {
@@ -55,6 +57,7 @@
     height: 240px;
     width: 380px;
     margin-right: 0px;
+    box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2), 0 8px 25px 0 rgba(0, 0, 0, 0.19) !important;
   }
 }
 
@@ -63,6 +66,7 @@
   margin-top: 100px;
   margin-left: 75px;
   width: 450px;
+  box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2), 0 8px 25px 0 rgba(0, 0, 0, 0.19) !important;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -70,6 +74,7 @@
     float: left;
     margin-top: 100px;
     margin-left: 75px;
+    box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2), 0 8px 25px 0 rgba(0, 0, 0, 0.19) !important;
   }
 }
 
@@ -80,6 +85,7 @@
     margin-top: 10px;
     margin-left: 0px;
     width: 380px;
+    box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2), 0 8px 25px 0 rgba(0, 0, 0, 0.19) !important;
   }
 }
 

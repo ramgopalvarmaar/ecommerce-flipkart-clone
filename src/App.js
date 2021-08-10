@@ -28,7 +28,7 @@ function App() {
   }, [auth.authenticate]);
 
   return (
-    <div className="App">
+    <div className="App" style={{backgroundColor:"#edb664"}}>
       <Router>
         <Switch>
           <Route path="/" exact component={HomePage} />

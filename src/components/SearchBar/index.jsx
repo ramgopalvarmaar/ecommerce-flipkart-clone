@@ -235,7 +235,7 @@ export function SearchBar(props) {
                     key={product.Name}
                     thumbanilSrc={product.ImgUrl}
                     name={product.Name}
-                    cardsUrl={`/search/${product.BrandName} ${product.Name}`}
+                    cardsUrl={`/search/${product.Name}`}
                 />
               ))}
             </>

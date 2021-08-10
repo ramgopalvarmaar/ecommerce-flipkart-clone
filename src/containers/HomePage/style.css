@@ -30,6 +30,7 @@
   width: 480px;
   text-align: center;
   margin: auto;
+  box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2), 0 8px 25px 0 rgba(0, 0, 0, 0.19) !important;
 }
 
 @media only screen and (max-width: 768px) {
