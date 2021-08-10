@@ -7,6 +7,9 @@ import "./style.css";
 import PriceChart from './pricechart';
 import AmazonWidget from './amazonadd';
 import { SearchBar } from "../../components/SearchBar";
+import LottieAnimation from './lottie';
+import home from '../../images/lottie.json';
+
 
 /**
  * @author
@@ -17,16 +20,13 @@ const ProductCardsPage = (props) => {
   const product = useSelector((state) => state.product);
   const products = product.products;
   const dispatch = useDispatch();
+  const loading = useSelector((state) => state.product.loading);
 
   useEffect(() => {
     const { match } = props;
-    console.log("######## ProductCardsPage match.params.searchTerm #######");
-    console.log(match.params.searchTerm);
     dispatch(getProductsBySearchTerm(match.params.searchTerm));
   }, []);
 
-  console.log("####### productDetails");
-  console.log(products);
   const sortedProducts = products.sort((a, b) => Number(a.Price) - Number(b.Price));
 
   const productdata = {
@@ -64,13 +64,19 @@ const ProductCardsPage = (props) => {
   return (
     <Layout>
       <>
+      {loading &&
+          <div className='example'>
+          <LottieAnimation lotti={home} height={300} width={300} />
+          </div>
+        }
         <div class="price-cards-container">
             <div class="search-bar">
-            <SearchBar></SearchBar>
-            </div>
-            <div class="card price-chart">
-              <PriceChart data={productdata} options={chartoptions} />
+            {!loading && <SearchBar></SearchBar>}
           </div>
+          {!loading &&
+            <div class="card price-chart">
+             <PriceChart data={productdata} options={chartoptions} />
+          </div>}
           {sortedProducts.length > 0 ?
             <div>
               {sortedProducts.map((product, index) => (
@@ -96,15 +102,17 @@ const ProductCardsPage = (props) => {
             </div>
             :
             <div>
+              {!loading  &&
               <div class="card border-success w3-container w3-animate-opacity">
-                  <img class="product-image" src="https://live.staticflickr.com/1917/45259347801_1e899439f7_n.jpg" />
-                  <div class="product-card-body" style={{textAlign:"center"}}>
-                    <h5 class="card-title">Sorry! Couldn't find. Please try again later</h5>
-                    <a target="_blank" href="https://www.amazon.in/s/ref=mega_elec_s23_1_1_1_1?rh=i%253Aelectronics%252Cn%253A1389401031&amp;ie=UTF8&amp;bbn=976419031&_encoding=UTF8&tag=geekyvids-21&linkCode=ur2&linkId=ca073eb0696e352578c6e03cff8880a5&camp=3638&creative=24630">
-                      Try searching from amazon.in
-                    </a>
+                <img class="product-image" src="https://live.staticflickr.com/1917/45259347801_1e899439f7_n.jpg" />
+                <div class="product-card-body" style={{ textAlign: "center" }}>
+                  <h5 class="card-title">Sorry! Couldn't find. Please try again later</h5>
+                  <a target="_blank" href="https://www.amazon.in/s/ref=mega_elec_s23_1_1_1_1?rh=i%253Aelectronics%252Cn%253A1389401031&amp;ie=UTF8&amp;bbn=976419031&_encoding=UTF8&tag=geekyvids-21&linkCode=ur2&linkId=ca073eb0696e352578c6e03cff8880a5&camp=3638&creative=24630">
+                    Try searching from amazon.in
+                  </a>
                 </div>
-                </div>
+              </div>
+              }
             </div>
           }
           <AmazonWidget />
