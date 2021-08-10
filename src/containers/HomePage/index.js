@@ -31,27 +31,27 @@ const HomePage = (props) => {
           <h1 style={{fontSize:"18px"}}>We compare multiple shopping sites at once</h1>
           <div class="images">
             <div class="photo w3-container w3-center w3-animate-right">
-                <img src="https://logos-download.com/wp-content/uploads/2016/09/Flipkart_logo.png" alt="photo" />
+                <img src="https://i.im.ge/2021/08/10/9SY5D.png" alt="photo" />
             </div>
 
             <div class="photo w3-container w3-center w3-animate-right">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Poorvika-logo1.png" alt="photo" />
+                <img src="https://i.im.ge/2021/08/10/9SCNh.png" alt="photo" />
             </div>
 
             <div class="photo w3-container w3-center w3-animate-right">
-                <img src="http://www.pngimagesfree.com/LOGO/R/Reliance-Digital/Reliance-Digital-Logo-PNG-Transparent-image.png" alt="photo" />
+                <img src="https://i.im.ge/2021/08/10/9S3rY.png" alt="photo" />
             </div>
 
             <div class="photo w3-container w3-center w3-animate-right">
-                <img src="https://cdn.icon-icons.com/icons2/2429/PNG/512/mi_logo_icon_147262.png" alt="photo" />
+                <img src="https://i.im.ge/2021/08/10/9StJX.png" alt="photo" />
             </div>
 
             <div class="photo w3-container w3-center w3-animate-right">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Tata_Cliq_Logo.png/320px-Tata_Cliq_Logo.png" alt="photo" />
+                <img src="https://i.im.ge/2021/08/10/9SAS8.png" alt="photo" />
             </div>
 
             <div class="photo w3-container w3-center w3-animate-right">
-                <img src="https://www.seekpng.com/png/full/147-1471515_credit-card-logos-png-tata-croma-logo-png.png" alt="photo" />
+                <img src="https://i.im.ge/2021/08/10/9SEfM.png" alt="photo" />
             </div>
             <div class="w3-container w3-center w3-animate-right" style={{paddingTop:"10px"}}>+more</div>
           </div>
